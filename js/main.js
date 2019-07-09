@@ -15,7 +15,7 @@ var app = new Vue({
   },
   components:{
   	'my-com': {
-  		template: '<footer>2019-07-08<footer>'
+  		template: '<footer>2019-07-08</footer>'
   	}
   },
   methods:{
@@ -50,7 +50,7 @@ new Vue({
 Vue.component(
 	'politik',{
 	props:{deci:String},
-	template:'<p>{{deci}}<p>'
+	template:'<p>{{deci}}</p>'
 
 })
 new Vue({
