@@ -26,5 +26,33 @@ img{
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	background-color: white;
-	padding:10px;
+	padding:50px;
+}
+#politik{
+	animation:mymove 1s infinite ;
+	-webkit-animation:mymove 1s infinite ;
+}
+@keyframes mymove{
+	0%{
+     background-color:#8BC34A;
+
+	}
+	50%{
+	transform:scale(0.8,1);	
+	}
+	100%{
+	background-color:#9E9E9E;
+	box-shadow:5px 5px 10px gray;
+	transform:rotate(360deg);
+	border-radius:100px;
+	
+	}
+}
+@-webkit-keyframes mymove{
+	0%{
+     background-color:aqua
+	}
+	100%{
+	background-color:brown
+	}
 }
