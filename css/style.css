@@ -6,13 +6,13 @@ html,body,div,p,span,img{
 body{
 	background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562651323386&di=cbd2bce859224dfcea64a86cc361670b&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0163025b28c3a2a8012034f72a8fe2.jpg%403000w_1l_0o_100sh.jpg");
 	background-repeat:repeat;
-	color:white;
 	font-size:14rpx;
 }
 div{
 	position: relative;
 	float:left;
 	margin:10px;
+	background-color:white;
 }
 img{
 	width:300px;
