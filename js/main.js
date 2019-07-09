@@ -1,6 +1,6 @@
-var vm=new Vue({
-  el:'#app',
-  data:{
-  msg:'Hello,Vue'
+var app = new Vue({
+  el: '#app',
+  data: {
+    msg: 'Hello Vue!'
   }
 })
