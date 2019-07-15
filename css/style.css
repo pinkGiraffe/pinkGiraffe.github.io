@@ -1,58 +1,66 @@
-html,body,div,p,span,img{
-	box-sizing:content-box;
-	margin:0;
-	padding:0;
-	font-size: 20px;
+body,div,nav,span,form{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
 }
 body{
-	background:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562651323386&di=cbd2bce859224dfcea64a86cc361670b&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0163025b28c3a2a8012034f72a8fe2.jpg%403000w_1l_0o_100sh.jpg");
-	background-repeat:repeat;
-	font-size: 1.2rem;
+    background:url('../img/star.jpeg');
+    height:100%;
+    width:100%;
 }
-div{
-	position: relative;
-	float:left;
-	margin:10px;
-
+body #content{
+    padding:20px;
 }
-img{
-	width:300px;
+.top{
+    position: relative;
+    right:-200px;
+    top:30px;
 }
-#app, #party,#politik{
-	width:300px;
-	border:1px solid black;
-	border-radius: 5px;
-	-ms-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	background-color: white;
-	padding:50px;
+.top div{
+    color:white;
+    display: inline-block;
+    font-size: 20px;
+    border:3px solid white;
+    background:transparent;
+    height:75px;
+    width:75px;
+    text-align: center;
+    padding:20px 10px;
+    border-radius:33px;
+    font-family: fantasy;
 }
-#politik{
-	animation:mymove 1s infinite ;
-	-webkit-animation:mymove 1s infinite ;
+.top div:hover,.top div:active{
+    background-color:white;
+    color:black;
+    cursor: pointer;
 }
-@keyframes mymove{
-	0%{
-     background-color:#8BC34A;
-
-	}
-	50%{
-	transform:scale(0.8,1);	
-	}
-	100%{
-	background-color:#9E9E9E;
-	box-shadow:5px 5px 10px gray;
-	transform:rotate(360deg);
-	border-radius:100px;
-	
-	}
+.top div:visited{
+    color:black;    
 }
-@-webkit-keyframes mymove{
-	0%{
-     background-color:aqua
-	}
-	100%{
-	background-color:brown
-	}
+body form#login{
+    border:2px solid wheat;
+    width:40%;
+    margin:auto auto;
+    color:white;
+    background-color:black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#login>div{
+    width:50%;
+    margin:10px auto;
+}
+#login input{
+    background:transparent;
+    color:saddlebrown
+}
+div#start{
+ position:absolute;
+ top:0px;
+ background-color:black;
+ width:100%;
+ height:100%;
+ z-index:-1;
+ opacity: 0.8;
 }
