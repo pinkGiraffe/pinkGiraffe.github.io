@@ -1,27 +1,45 @@
 <html>
   <head>
     <link href="css/style.css" rel="stylesheet"/>
-    <script src="js/flexible.js" type="text/javascript"></script>
-    <script src="js/vue.js" type="text/javascript"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
   </head>
   <body>
-   <div id="app">
-	  <img v-bind:src='picUrl'/>
-	  <button v-on:click="pic">显示图片</button>
-    <p>{{weapon[0]}}爆发于{{weapon[1]}},使用的武器为{{weapon[2]}}</p>
-    <p>{{weapon02[0]}}爆发于{{weapon02[1]}},使用的武器为{{weapon02[2]}}</p>
-    <p>{{weapon03[0]}}爆发于{{weapon[1]}},使用的武器为{{weapon03[2]}}</p>
-    <my-com></my-com>
-    <input type="button" v-on:keyup.enter="show" value="警告信息"></input>
+    <div id="content">
+    <nav class="top">
+      <div id="beijing">Beking</div>
+      <div id="roman">Roman</div>
+      <div id="paris">Paris</div>
+    </nav>
+    <nav class="top">
+        <div id="beijing">Berlin</div>
+        <div id="roman">Prag</div>
+        <div id="paris">Amster</div>
+    </nav>
+    <nav class="top">
+          <div id="beijing">Brussel</div>
+          <div id="roman">Muenc</div>
+          <div id="paris">Yadian</div>
+    </nav>
+    <form id="login">
+      <div>
+        <div class="label"><label for="user">用户名</label></div>
+        <input id="user" />
+      </div>
+      <div>
+        <div class="label"><label for="password">密码</label></div>
+        <input id="password"/></label>
+      </div>
+      <div>
+        <input type="button" id="login_btn" value="send" />
+      </div>
+    </form>
+  </div>>
+  <div id="start"></div>
+  <div id="user">
+    <div id="flower">
+      <img src="img/flower.png" />
+    </div>
   </div>
-  <div id="party">
-	  <conferenz v-for="quelle in quellen" v-bind:region="quelle.reg">{{region}}</conferenz>
-  </div>
-  <div id="politik">
-	  <politik v-bind:deci="news[0]"></politik>
-	  <politik v-bind:deci="news[1]"></politik>
-	  <politik v-bind:deci="news[2]"></politik>
-  </div>
-<script src="js/main.js" type="text/javascript"></script>
-</body>
+  </body>
 </html>
