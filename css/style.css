@@ -4,7 +4,8 @@ body,div,nav,span,form{
     margin:0;
 }
 body{
-    background:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563168862102&di=5e5c101208fe98c85ca7417c206707dc&imgtype=0&src=http%3A%2F%2Fbannerdesign.cn%2Fwp-content%2Fuploads%2F2015%2F06%2F2015060501270964.jpeg') repeat;
+    background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563168862102&di=5e5c101208fe98c85ca7417c206707dc&imgtype=0&src=http%3A%2F%2Fbannerdesign.cn%2Fwp-content%2Fuploads%2F2015%2F06%2F2015060501270964.jpeg') repeat;
+    background-repeat:repeat;
     height:100%;
     width:100%;
 }
