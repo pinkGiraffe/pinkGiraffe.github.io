@@ -5,7 +5,7 @@ $(document).ready(function(){
     })
     $("#introduction").click(function(){
         $.ajax({
-            type:"get",
+            type:"GET",
             url:"../data/pai.txt",
             dataType:"txt",
             success:function(data){
