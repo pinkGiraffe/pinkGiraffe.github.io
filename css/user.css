@@ -1,0 +1,16 @@
+#user{
+    position: absolute;
+    right:20px;
+}
+#flower{
+   animate:mylove 1s infinitive; 
+}
+@keyframes mylove{
+    0%{
+
+    }
+    100%{
+    
+        transform: rotate(360deg);
+    }
+}
