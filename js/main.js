@@ -10,7 +10,7 @@ $(document).ready(function(){
             dataType:"txt",
             success:function(data){
                 if(data.success){
-                    $("#flower h1").text(data);
+                    console.log(data);
                 }
                 else{
                     $("#flower h1").text("无法连接该书书目");
