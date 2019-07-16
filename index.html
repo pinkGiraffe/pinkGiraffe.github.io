@@ -1,62 +1,81 @@
 <html>
-  <head>
-    <link href="css/style.css" rel="stylesheet"/>
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-  </head>
-  <body>
-    <div id="content">
-    <nav class="top">
-      <div id="beijing">Beking</div>
-      <div id="roman">Roman</div>
-      <div id="paris">Paris</div>
-    </nav>
-    <nav class="top">
-        <div id="beijing">Berlin</div>
-        <div id="roman">Prag</div>
-        <div id="paris">Amster</div>
-    </nav>
-    <nav class="top">
-          <div id="beijing">Brussel</div>
-          <div id="roman">Muenc</div>
-          <div id="paris">Yadian</div>
-    </nav>
-    <form id="login">
-      <div>
-        <div class="label"><label for="user">用户名</label></div>
-        <input id="user" />
-      </div>
-      <div>
-        <div class="label"><label for="password">密码</label></div>
-        <input id="password"/></label>
-      </div>
-      <div>
-        <input type="button" id="login_btn" value="send" />
-      </div>
-    </form>
-  </div>>
-  <div id="start"></div>
-  <div id="user">
-    <div id="flower">
-      <button id="introduction">Pai</button>
-      <h1><h1>
-    </div>
-  </div>
-   <script>
-      $("#introduction").click(function(){
-        $.ajax({
-          url:"data/msg.txt",
-        type:"GET",
-        dataType:"text",
-        async:true,
-        success:function(data){
-            $("#flower h1").text(data);
-        },
-        error:function(){
-            console.log("ajax访问出现问题，请检查代码，再次运行");
-        }
-        }) 
-     })
-   </script>
-  </body>
+    <head>
+        <title>Choose</title>
+        <meta charset="utf-8"/>
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <nav id="nav" class="top_area">
+           
+            <ul>
+                <li> <img id="avatar" height="50px" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563270664171&di=509594bb6d008f9e27be3bf30caaa578&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201308%2F10%2F20130810110601_jYcyW.jpeg"></li>
+                <li><a>ME</a></li>
+                <li><a>前端趴</a></li>
+                <li><a>旅行趴</a></li>
+                <li><a>趣味小知识趴</a></li>
+            </ul>
+        </nav>
+        <section class="content content_info">
+            <div class="title title_info">
+                <h1>基本资料</h1>
+                <div>
+                    <p>
+                        <strong>学历：</strong>本科
+                    </p>
+                    <p>
+                        <strong>毕业学校专业：</strong><br/>德国莱比锡大学，经济信息专业
+                    </p>
+                    <p>
+                    <strong>联系方式：</strong><br/>wmk9227@163.com | 15626192585
+                    </p>
+                    <p>
+                    <strong>个人github主页: </strong><br/>www.mini-pitaya.club
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="content content_edu">
+                <div class="title title_info">
+                        <h1>教育经历</h1>
+                        <div>
+                            <p>
+                                <strong>时间：</strong>2014.10-2019.3 <br/>
+                                莱比锡大学经济信息专业
+                            </p>
+                            <p>
+                                <strong>在校经历：</strong>组织开展莱比锡中国学联迎新月，2017莱比锡鸡年春节联欢，"莱比锡学者沙龙"等活动, 并代表莱比锡中国留学生参加了2016年在汉堡大学举行的中德青少年交流年闭幕式。<br/>
+                            </p>
+                            <p>
+                            <strong>联系方式：</strong>wmk9227@163.com | 15626192585<br/>
+                            </p>
+                        </div>
+                    </div>
+        </section>
+        <section class="content content_work">
+            <h1>工作经历</h1>
+            <div class="work work1">
+               <div class="img"> <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563274372055&di=25b25bb4a2968ccb43cf7e75bc34a19e&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F72%2F07%2F01300000174259121499079212811_s.jpg"></div>
+                <div class="work1_text">
+                    <strong>公司:</strong><p>Eimm GmbH</p>
+                    <strong>所任职务:</strong><p>前端开发实习生</p>
+                    <strong>工作时间:</strong><p>2017.04-2017.10</p>
+                    <strong>项目问题:</strong><p>链接：www.afterbuy-service.de
+                            实现技术 html5+css3+jquery+php
+                            项目难点：
+                            1. 使用了大量的 google字体，和点击图标导致加载速度过慢，用户体验差
+                            解决办法：考虑到页面主要以汉字为主，取消掉了标配的空间字体，而图标的一些点击效果使用 CSS Sprite 来实现，即将图片拼合为一张图，通过控制 backgorund-position来实现图标的点击效果。同时对图片的位置和大小进行设置，避免浏览器边加载边计算图片
+                            2.在项目实施过程中，并列的4个div元素，在移动端显示出现3+1问题，影响美观
+                            解决方法：display设置为flex，但是导致媒体查询功能消失。增加了margn的距离，保证每行显示2个div元素。
+                            3.用户表单处理，需要一系列验证，后端form.php时，发送subject出现中文乱码，谷歌地图无法使用
+                            解决方法：在发送邮件标题部分设置utf-8，很快解决。 谷歌地图只能用截图来代替。
+                            4.在点击法律栏中，弹出遮罩层
+                            解决方法：在网页底部新建一个大面积的div元素。通过点击事件调整其display 的属性，达到预期效果。</p>
+                </div>
+            </div>
+            <div class="work work1">
+            </div>
+        </section>
+    </body>
 </html>
