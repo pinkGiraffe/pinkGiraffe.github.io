@@ -1,67 +1,60 @@
-body,div,nav,span,form{
-    box-sizing: border-box;
-    padding:0;
+body,nav,div,img,ul,li,section{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-body{
-    background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563168862102&di=5e5c101208fe98c85ca7417c206707dc&imgtype=0&src=http%3A%2F%2Fbannerdesign.cn%2Fwp-content%2Fuploads%2F2015%2F06%2F2015060501270964.jpeg');
-    background-repeat:repeat;
-    height:100%;
+html{
+    background-img:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563273630012&di=0def6b9df5c62b2e8d7fb17d0b5610e9&imgtype=0&src=http%3A%2F%2Fpic38.nipic.com%2F20140224%2F12106414_185816509341_2.jpg');
+}
+#nav{
+    background-color:black;
     width:100%;
 }
-body #content{
-    padding:20px;
+#nav img{
+
 }
-.top{
-    position: relative;
-    right:-200px;
-    top:30px;
+ul{
+    list-style: none;
+    display: flex;
 }
-.top div{
-    color:white;
-    display: inline-block;
-    font-size: 20px;
-    border:3px solid white;
-    background:transparent;
-    height:75px;
-    width:75px;
+.top_area li{
+    flex:1;
+    display:inline-block;
     text-align: center;
-    padding:20px 10px;
-    border-radius:33px;
-    font-family: fantasy;
 }
-.top div:hover,.top div:active{
-    background-color:white;
-    color:black;
+.top_area li a{
+    display: inline-block;
+    font-size:24px;
+    color:wheat;
+    margin:12px auto 10px auto;
+}
+.top_area li a:hover,.top_area li a:active{
+    color:silver;
     cursor: pointer;
 }
-.top div:visited{
-    color:black;    
+section.content{
+    width:100%;
+    padding:15px;
 }
-body form#login{
-    border:2px solid wheat;
-    width:40%;
-    margin:auto auto;
-    color:white;
-    background-color:black;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px gray;
-    font-family: Arial, Helvetica, sans-serif;
+.content_edu{
+    background-color: beige;
 }
-#login>div{
-    width:50%;
-    margin:10px auto;
+
+.work{
+    display:inline-block;
+    border:1px solid #4e4e4e;
+    vertical-align: text-top;
+    padding:15px 5px;
 }
-#login input{
-    background:transparent;
-    color:saddlebrown
+.work img{
+    position: relative;
+    top:5px;
 }
-div#start{
- position:absolute;
- top:0px;
- background-color:black;
- width:100%;
- height:100%;
- z-index:-1;
- opacity: 0.8;
+.work div{
+    position:relative;
+    float:left;
+    margin-right:10px;
+}
+.work1_text{
+    width:300px;
 }
