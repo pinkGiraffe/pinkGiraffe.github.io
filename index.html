@@ -42,5 +42,21 @@
       <h1><h1>
     </div>
   </div>
+   <script>
+      $("#introduction").click(function(){
+        $.ajax({
+          url:"data/msg.txt",
+        type:"GET",
+        dataType:"text",
+        async:true,
+        success:function(data){
+            $(".data_text").text(data);
+        },
+        error:function(){
+            console.log("ajax访问出现问题，请检查代码，再次运行");
+        }
+        }) 
+     })
+   </script>
   </body>
 </html>
