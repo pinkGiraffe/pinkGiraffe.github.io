@@ -99,8 +99,11 @@
                     type: "get",
                     dataType: "String",
                     success:function(data){
-                        console.log(data);   
-                     }
+                       alert(data);   
+                     },
+                    error: function(){
+                    console.log("出现同源错误");
+                    }
                     })
                 })
             })
