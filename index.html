@@ -88,7 +88,22 @@
                         -公司产品以教育为主，对收集来的教育资源进行分类整理和加工。用到word,excel,Axure。
                     </p>
                     </div>
+                <button id="test">测试Ajax的运行</button>
             </div>
         </section>
+        <script>
+            $(documeng).ready(function(){
+                $("#test").click(function(){
+                    $.ajax({
+                    url: "message.txt",
+                    type: "get",
+                    dataType: "String",
+                    success:function(data){
+                        console.log(data);   
+                     }
+                    })
+                })
+            })
+        </script>
     </body>
 </html>
