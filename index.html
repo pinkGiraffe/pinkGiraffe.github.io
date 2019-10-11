@@ -1,112 +1,60 @@
+<!doctype html>
 <html>
-    <head>
-        <title>Choose</title>
-        <meta charset="utf-8"/>
-        <link href="css/style.css" rel="stylesheet" />
-        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <link href='style.css' rel='stylesheet'/>
+    <script src="js/echarts.js"></script>
+</head>
     <body>
-        <nav id="nav" class="top_area">
-           
-            <ul>
-                <li> <img id="avatar" height="50px" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563270664171&di=509594bb6d008f9e27be3bf30caaa578&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201308%2F10%2F20130810110601_jYcyW.jpeg"></li>
-                <li><a>ME</a></li>
-                <li><a href="./sub/front.html">前端趴</a></li>
-                <li><a>旅行趴</a></li>
-                <li><a>趣味小知识趴</a></li>
-            </ul>
-        </nav>
-        <section class="content content_info">
-            <div class="title title_info">
-                <h1>基本资料</h1>
-                <div>
-                    <p>
-                        <strong>学历：</strong>本科
-                    </p>
-                    <p>
-                        <strong>毕业学校专业：</strong><br/>德国莱比锡大学，经济信息专业
-                    </p>
-                    <p>
-                    <strong>联系方式：</strong><br/>wmk9227@163.com | 15626192585
-                    </p>
-                    <p>
-                    <strong>个人github主页: </strong><br/>www.mini-pitaya.club
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="content content_edu">
-                <div class="title title_info">
-                        <h1>教育经历</h1>
-                        <div>
-                            <p>
-                                <strong>时间：</strong>2014.10-2019.3 <br/>
-                                莱比锡大学经济信息专业
-                            </p>
-                            <p>
-                                <strong>在校经历：</strong>组织开展莱比锡中国学联迎新月，2017莱比锡鸡年春节联欢，"莱比锡学者沙龙"等活动, 并代表莱比锡中国留学生参加了2016年在汉堡大学举行的中德青少年交流年闭幕式。<br/>
-                            </p>
-                            <p>
-                            <strong>联系方式：</strong>wmk9227@163.com | 15626192585<br/>
-                            </p>
-                        </div>
-                    </div>
-        </section>
-        <section class="content content_work">
-            <h1>工作经历</h1>
-            <div class="work work1">
-               <div class="img"> <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563274372055&di=25b25bb4a2968ccb43cf7e75bc34a19e&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F72%2F07%2F01300000174259121499079212811_s.jpg"></div>
-                <div class="work1_text">
-                    <strong>公司:</strong><p>Eimm GmbH</p>
-                    <strong>所任职务:</strong><p>前端开发实习生</p>
-                    <strong>工作时间:</strong><p>2017.04-2017.10</p>
-                    <strong>项目问题:</strong><p>链接：www.afterbuy-service.de
-                            实现技术 html5+css3+jquery+php
-                            项目难点：
-                            1. 使用了大量的 google字体，和点击图标导致加载速度过慢，用户体验差
-                            解决办法：考虑到页面主要以汉字为主，取消掉了标配的空间字体，而图标的一些点击效果使用 CSS Sprite 来实现，即将图片拼合为一张图，通过控制 backgorund-position来实现图标的点击效果。同时对图片的位置和大小进行设置，避免浏览器边加载边计算图片
-                            2.在项目实施过程中，并列的4个div元素，在移动端显示出现3+1问题，影响美观
-                            解决方法：display设置为flex，但是导致媒体查询功能消失。增加了margn的距离，保证每行显示2个div元素。
-                            3.用户表单处理，需要一系列验证，后端form.php时，发送subject出现中文乱码，谷歌地图无法使用
-                            解决方法：在发送邮件标题部分设置utf-8，很快解决。 谷歌地图只能用截图来代替。
-                            4.在点击法律栏中，弹出遮罩层
-                            解决方法：在网页底部新建一个大面积的div元素。通过点击事件调整其display 的属性，达到预期效果。</p>
-                </div>
-            </div>
-            <div class="work work1">
-                 <div class="img"> <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=181186740,1029854529&fm=11&gp=0.jpg"></div>
-                    <div class="work1_text">
-                        <strong>公司:</strong><p>中版行知（广州）数字传媒有限公司</p>
-                        <strong>所任职务:</strong><p>产品经理</p>
-                        <strong>工作时间:</strong><p>2019.05-2019.07</p>
-                        <strong>项目问题:</strong><p>区政府朗读亭项目<br/>
-                        -客户群一般以政府学校为主<br/>
-                        -使用photoshop修缮各类产品图，宣传图<br/>
-                        -独立参与B2B产品定制，收集整理归档客户需求，Axure RP绘制原型图，并根据需要进行版面调整。<br/>
-                        - 使用流程图用来技术部准确对接推进项目，和销售技术进行协作。同时进行产品全方位测试。<br/>
-                        -公司产品以教育为主，对收集来的教育资源进行分类整理和加工。用到word,excel,Axure。
-                    </p>
-                    </div>
-                <button id="test">测试Ajax的运行</button>
-            </div>
-        </section>
-        <script>
-            $(document).ready(function(){
-                $("#test").click(function(){
-                    $.ajax({
-                    url: "https://www.mini-pitaya.club/message.txt",
-                    type: "get",
-                    dataType: "String",
-                    success:function(data){
-                       alert(data);   
-                     },
-                    error: function(){
-                    console.log("出现同源错误");
-                    }
-                    })
-                })
-            })
-        </script>
-    </body>
+        
+    <nav>
+        <div id='title' style='font-size: 28px; text-align:center; color:lightseagreen; font-weight:bold; width:100%; background:rgba(130,130,144,0.3); padding:10px ' >患者体验数据管理云平台</div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+    <section class='table normalData'>  <!--综合数据模块-->
+        <div id='satisfy_suggest'>      
+            <h1 style='color:rgb(110,134,134)'>本次住院</h1>
+            <h1>统计结果为</h1>
+            <div id="satisfy"  style="width: 250px; height:300px;"></div>
+            <div id="suggest"  style="width: 250px; height:300px;"></div>
+        </div>
+        <div id='tendencyInfo'>
+            <div id='ss_tendency' class='table' style="width: 800px; height:450px;"></div>
+        </div>
+        <div id='index2'>
+            <div id='index2RadarMap' class='table' style="width: 530px; height:450px;"></div>
+        </div>
+    </section>
+    <div class='clear'></div>
+    <section class="table basicData"> <!--基础数据-->
+        <h1>基础数据分析</h1>
+        <div id="gelenderInfo">
+            <div id="gelender" class='table' style="width: 530px;height:450px;"></div>
+        </div>
+        <div id="age" class='table' style="width: 530px;height:450px;"></div>
+        <div id="amount" class='table' style="width: 530px;height:450px;"></div>
+        <div id="adress" class='table' style="width: 530px;height:450px;"></div>
+        <div id="reason" class='table' style="width: 530px;height:450px;"></div>
+        <div id="transport" class='table' style="width: 530px; height:450px;"></div>
+    </section>
+    <div class='clear'></div>
+    <section class="analyData">
+        <h1>历史记录</h1>
+        <div id="indexTree" class='table'  style="width: 100%; height:450px;"></div>
+        <div id="index2Tree" class='table' style="width: 530px; height:450px;"></div>
+        <div id="index3Historic" class='table' style="width: 530px; height:450px;"></div>
+    </section>
+    <section>
+        <div id='usermap' style="width: 1000px; height:450px;"></div>
+        <div id='matrix' style = "width: 1000px; height:500px;"></div>
+    </section>
+    <script type="text/javascript" src="js/main.js">
+    </script>
+</body>
 </html>
