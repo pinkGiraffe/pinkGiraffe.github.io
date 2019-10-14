@@ -910,7 +910,7 @@ var option = {
         trigger: 'axis'
     },
     legend: {
-        data:['year','score']
+        data:['用药指导','诊疗水平','隐私保护']
     },
     calculable : true,
     xAxis : [
@@ -1287,5 +1287,109 @@ var matrixOption = {
                 ]
 }
 matrixChart.setOption(matrixOption);
-
+//科室医生患者体验指标历史得分情况
+var index3HistoricChart = echarts.init(document.getElementById("doctorHistoric"));
+    var index3HistoricOption = {
+    title: {
+        text: '该医生患者体验指标历史得分',
+        textStyle: {
+            color: 'black'
+        },
+        top:'3%',
+        left:'center'
+    },
+    backgroundColor: '',
+    tooltip : {
+        trigger: 'item'
+    },
+    legend: {
+        data:['医生用药指导','医生诊疗水平','医生隐私保护']
+    },
+    label: {
+        normal: {
+            position: 'center',
+            formatter:'系列为:{a}; 类目值为:{b} 数值为{c}'
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            axisLabel:{
+                rotate: 30,
+                interval:0
+            },
+            axisLine:{
+                symbol: ['none','arrow'],
+              lineStyle :{
+                  color: 'rgb(110,134,134)',
+                  symbol: ['none','arrow']
+              },
+              
+            },
+            type : 'category',
+            boundaryGap : false,
+            data : function () {
+                var list = [];
+                for (var i = 1; i < 10; i++ ) {
+                    list.push('2017.'+i);
+                }
+                return list;
+            }()
+        }
+    ],
+    yAxis : [
+        {
+            axisLabel:{
+                interval:5
+            },
+            type:'value',
+            min: 50,
+            axisLine:{
+                lineStyle :{
+                    color: 'rgb(110,134,134)',
+                    
+                },
+                symbol: ['none','arrow']
+            },
+            data: function () {
+                var list = [];
+                for (var i = 50; i <100; i++ ){
+                    list.push(i);
+                    i+=10
+                }
+                return list;
+            }()
+            }
+        
+    ],
+    
+    series : [
+        {
+            name:'医生用药指导',
+            type:'line',
+            symbol:'rect',
+            smooth: 0.2,
+            color:['rgb(110,134,240)'],
+            data:['84','83','86','82','86.2','77','94','85']
+        },
+        {
+            name:'医生隐私保护',
+            type:'line',
+            symbol:'rect',
+            smooth: 0.2,
+            color:['rgb(110,134,24)'],
+            data:['80','82','87','85','81']
+        },
+        {
+            name:'医生诊疗水平',
+            type:'line',
+            symbol:'rect',
+            smooth: 0.2,
+            color:['rgb(110,14,134)'],
+            data:['82','83','85','88','87','83','82','89','80']
+        }
+    ]
+};
+        
+index3HistoricChart.setOption(index3HistoricOption);
 
